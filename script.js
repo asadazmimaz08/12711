@@ -12,7 +12,7 @@ $(document).keypress(function(){
       $("body").removeClass("game-over");
     }
 
-    var audio=new Audio("sounds/simonGame.mp3");
+    var audio=new Audio("simonGame.mp3");
     audio.play();
     game=true;
     level=0;
@@ -63,7 +63,7 @@ function checker(currentIndex){
 
 function gameOver(){
   setTimeout(function(){
-    var audio= new Audio("sounds/gameOver.mp3");
+    var audio= new Audio("gameOver.mp3");
     audio.play();
   },2000)
   game=false;
@@ -84,11 +84,11 @@ function pressed(userPickedColor){
 }
 
 function buttonAudio(color){
-  audio= new Audio("sounds/"+color+".mp3");
+  audio= new Audio(color+".mp3");
   audio.play();
 }
 
 function wrongAudio(){
-  var audio= new Audio("sounds/wrong.mp3");
+  var audio= new Audio("wrong.mp3");
   audio.play();
 }
